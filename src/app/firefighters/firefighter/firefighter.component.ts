@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Firefighter } from "./firefighter.model";
 
 @Component({
   selector: 'app-firefighter',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class FirefighterComponent implements OnInit {
 
-  @Input() firefighter: {};
+  @Input() firefighter: Firefighter;
 
   constructor() { }
 
