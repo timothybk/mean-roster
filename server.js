@@ -5,8 +5,6 @@ const http = require('http');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose')
 
-// test
-
 // Get our API routes
 const api = require('./server/routes/api');
 
