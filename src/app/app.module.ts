@@ -1,26 +1,13 @@
-import { PostsService } from './posts/posts.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpModule } from "@angular/http";
-import { FormsModule } from "@angular/forms";
-// Imports commented out for brevity
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { PostsComponent } from './posts/posts.component';
-
-// Define the routes
-const ROUTES = [
-  {
-    path: '',
-    redirectTo: 'posts',
-    pathMatch: 'full'
-  },
-  {
-    path: 'posts',
-    component: PostsComponent
-  }
-];
+import { PostsService } from './posts/posts.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +18,7 @@ const ROUTES = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(ROUTES) // Add routes to the app
+    routing
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
