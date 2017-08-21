@@ -7,14 +7,16 @@ import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { PostsComponent } from './posts/posts.component';
-import { PostsService } from './posts/posts.service';
+import { FirefightersComponent } from './firefighters/firefighters.component';
+import { FirefighterComponent } from './firefighters/firefighter/firefighter.component';
+import { FirefightersService } from "./firefighters/firefighters.service";
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent,
-    HeaderComponent
+    HeaderComponent,
+    FirefightersComponent,
+    FirefighterComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +24,9 @@ import { PostsService } from './posts/posts.service';
     HttpModule,
     routing
   ],
-  providers: [PostsService],
+  providers: [
+    FirefightersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

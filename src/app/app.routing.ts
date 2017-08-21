@@ -1,15 +1,15 @@
-import { PostsComponent } from './posts/posts.component';
+import { FirefightersComponent } from "./firefighters/firefighters.component";
 import { Routes, RouterModule } from '@angular/router';
 
 const APP_ROUTES: Routes = [
   {
     path: '',
-    redirectTo: 'posts',
+    redirectTo: 'firefighters',
     pathMatch: 'full'
   },
   {
-    path: 'posts',
-    component: PostsComponent
+    path: 'firefighters',
+    component: FirefightersComponent
   }
 ];
 

@@ -12,9 +12,7 @@ router.get('/', (req, res) => {
 });
 
 // Get all posts
-router.get('/posts', (req, res) => {
-  // Get posts from the mock api
-  // This should ideally be replaced with a service that connects to MongoDB
+router.get('/firefighters', (req, res) => {
   FireFighter.find()
     .then(result => {
       res.status(200).json(result);
