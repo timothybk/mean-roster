@@ -1,3 +1,4 @@
+import { HeaderComponent } from './shared/header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
@@ -12,7 +13,8 @@ import { PostsService } from './posts/posts.service';
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent
+    PostsComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
