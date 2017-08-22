@@ -9,14 +9,16 @@ import { routing } from './app.routing';
 import { AppComponent } from './app.component';
 import { FirefightersComponent } from './firefighters/firefighters.component';
 import { FirefighterComponent } from './firefighters/firefighter/firefighter.component';
-import { FirefightersService } from "./firefighters/firefighters.service";
+import { FirefightersService } from './firefighters/firefighters.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FirefightersComponent,
-    FirefighterComponent
+    FirefighterComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

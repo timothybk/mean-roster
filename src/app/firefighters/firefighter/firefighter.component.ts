@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Firefighter } from "./firefighter.model";
+import { Firefighter } from './firefighter.model';
 
 @Component({
   selector: 'app-firefighter',
