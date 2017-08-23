@@ -1,18 +1,16 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 
 import { Firefighter } from './firefighter/firefighter.model';
 
 @Injectable()
 export class FirefightersService {
-  private firefighters: Firefighter[] = [];
+  firefighters: Observable<Firefighter[]>;
 
-  constructor(private http: Http) { }
-
-  // Get all firefighters
-  getAllFirefighters() {
-    return this.http.get('/api/firefighters')
+  constructor(private http: Http) {
+    this.firefighters = this.http.get('/api/firefighters')
       .map((response: Response) => {
         const firefighters = response.json();
         const transformedFirefighters: Firefighter[] = [];
@@ -24,8 +22,8 @@ export class FirefightersService {
             firefighter.name,
             firefighter.qualifications));
         }
-        this.firefighters = transformedFirefighters;
         return transformedFirefighters;
-      });
+      })
+      .shareReplay(1);
   }
 }

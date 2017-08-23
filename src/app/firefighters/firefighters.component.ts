@@ -15,7 +15,7 @@ export class FirefightersComponent implements OnInit {
   constructor(private firefightersService: FirefightersService) { }
 
   ngOnInit() {
-    this.firefightersService.getAllFirefighters()
+    this.firefightersService.firefighters
       .subscribe(
       firefighters => {
         this.firefighters = firefighters;
