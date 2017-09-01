@@ -1,2 +1,8 @@
-<app-firefighter *ngFor='let firefighter of firefighters' [firefighter]='firefighter'>
-</app-firefighter>
+<div class="row">
+  <div class="col-md-5">
+    <app-firefighter-list></app-firefighter-list>
+  </div>
+  <div class="col-md-7">
+    <router-outlet></router-outlet>
+  </div>
+</div>
