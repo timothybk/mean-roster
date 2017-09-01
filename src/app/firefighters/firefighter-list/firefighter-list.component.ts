@@ -1,3 +1,5 @@
+import { Firefighter } from './../firefighter.model';
+import { FirefightersService } from './../firefighters.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirefighterListComponent implements OnInit {
 
-  constructor() { }
+  firefighters: Firefighter[];
+
+  constructor(private firefightersService: FirefightersService) { }
 
   ngOnInit() {
+    this.firefightersService.firefighters
+    .subscribe(
+    firefighters => {
+      this.firefighters = firefighters;
+    },
+    err => {
+      console.log(err);
+    }
+    );
   }
 
 }
