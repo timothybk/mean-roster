@@ -8,7 +8,6 @@ import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { FirefightersComponent } from './firefighters/firefighters.component';
-import { FirefighterComponent } from './firefighters/firefighter/firefighter.component';
 import { FirefightersService } from './firefighters/firefighters.service';
 import { HomeComponent } from './home/home.component';
 import { FirefighterListComponent } from './firefighters/firefighter-list/firefighter-list.component';
@@ -22,7 +21,6 @@ import { FirefighterItemComponent } from './firefighters/firefighter-list/firefi
     AppComponent,
     HeaderComponent,
     FirefightersComponent,
-    FirefighterComponent,
     HomeComponent,
     FirefighterListComponent,
     FirefighterEditComponent,
