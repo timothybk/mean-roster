@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Firefighter } from './../../firefighter.model';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-firefighter-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./firefighter-item.component.css']
 })
 export class FirefighterItemComponent implements OnInit {
+  @Input() firefighter: Firefighter;
+  @Input() index: number;
 
   constructor() { }
 
