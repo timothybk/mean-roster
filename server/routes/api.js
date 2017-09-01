@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const FireFighter = require('./../models/firefighter')
+const Qualification = require('./../models/qualification')
 
 // declare axios for making http requests
 const axios = require('axios');
@@ -14,6 +15,7 @@ router.get('/', (req, res) => {
 // Get all posts
 router.get('/firefighters', (req, res) => {
   FireFighter.find()
+  .populate('qualifications')
     .then(result => {
       res.status(200).json(result);
     })

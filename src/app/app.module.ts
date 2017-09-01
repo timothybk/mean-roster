@@ -15,6 +15,7 @@ import { FirefighterEditComponent } from './firefighters/firefighter-edit/firefi
 import { FirefighterDetailComponent } from './firefighters/firefighter-detail/firefighter-detail.component';
 import { FirefighterStartComponent } from './firefighters/firefighter-start/firefighter-start.component';
 import { FirefighterItemComponent } from './firefighters/firefighter-list/firefighter-item/firefighter-item.component';
+import { QualificationsComponent } from './qualifications/qualifications.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FirefighterItemComponent } from './firefighters/firefighter-list/firefi
     FirefighterEditComponent,
     FirefighterDetailComponent,
     FirefighterStartComponent,
-    FirefighterItemComponent
+    FirefighterItemComponent,
+    QualificationsComponent
   ],
   imports: [
     BrowserModule,
