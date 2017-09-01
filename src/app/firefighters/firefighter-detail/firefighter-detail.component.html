@@ -1,3 +1,37 @@
-<p>
-  {{firefighter.name}}
-</p>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>temp</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{firefighter.name}}</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary dropdown-toggle">Manage Fire Fighter <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+        <li><a style="cursor: pointer;">To Pump?</a></li>
+        <li><a style="cursor: pointer;">Edit FireFighter</a></li>
+        <li><a style="cursor: pointer;">Delete FireFighter</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <ul class="list-group">
+      <li class="list-group-item"
+      *ngFor="let qualification of firefighter.qualifications">
+      {{qualification}}
+    </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col-xs-12">
+    <h1>temp</h1>
+  </div>
+</div>
