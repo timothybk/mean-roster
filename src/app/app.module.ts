@@ -11,6 +11,11 @@ import { FirefightersComponent } from './firefighters/firefighters.component';
 import { FirefighterComponent } from './firefighters/firefighter/firefighter.component';
 import { FirefightersService } from './firefighters/firefighters.service';
 import { HomeComponent } from './home/home.component';
+import { FirefighterListComponent } from './firefighters/firefighter-list/firefighter-list.component';
+import { FirefighterEditComponent } from './firefighters/firefighter-edit/firefighter-edit.component';
+import { FirefighterDetailComponent } from './firefighters/firefighter-detail/firefighter-detail.component';
+import { FirefighterStartComponent } from './firefighters/firefighter-start/firefighter-start.component';
+import { FirefighterItemComponent } from './firefighters/firefighter-list/firefighter-item/firefighter-item.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +23,12 @@ import { HomeComponent } from './home/home.component';
     HeaderComponent,
     FirefightersComponent,
     FirefighterComponent,
-    HomeComponent
+    HomeComponent,
+    FirefighterListComponent,
+    FirefighterEditComponent,
+    FirefighterDetailComponent,
+    FirefighterStartComponent,
+    FirefighterItemComponent
   ],
   imports: [
     BrowserModule,
