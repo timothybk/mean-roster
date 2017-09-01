@@ -3,7 +3,7 @@ import { Http, Response, Headers } from '@angular/http';
 import 'rxjs/Rx';
 import { Observable } from 'rxjs/Observable';
 
-import { Firefighter } from './firefighter/firefighter.model';
+import { Firefighter } from './firefighter.model';
 
 @Injectable()
 export class FirefightersService {

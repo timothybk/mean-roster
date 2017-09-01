@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FirefightersService } from './firefighters.service';
-import { Firefighter } from './firefighter/firefighter.model';
+import { Firefighter } from './firefighter.model';
 
 
 @Component({
