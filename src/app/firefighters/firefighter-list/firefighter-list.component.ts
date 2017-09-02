@@ -1,4 +1,4 @@
-import { Subscription } from 'rxjs/subscription';
+import { Subscription } from 'rxjs/Rx';
 import { Firefighter } from './../firefighter.model';
 import { FirefightersService } from './../firefighters.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';

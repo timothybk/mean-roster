@@ -2,7 +2,7 @@ import { Firefighter } from './../firefighter.model';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { FirefightersService } from './../firefighters.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs/subscription';
+import { Subscription } from 'rxjs/Rx';
 
 @Component({
   selector: 'app-firefighter-detail',

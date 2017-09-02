@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   res.send('api works');
 });
 
-// Get all posts
+// Get all firefighters
 router.get('/firefighters', (req, res) => {
   FireFighter.find()
   .populate('qualifications')
