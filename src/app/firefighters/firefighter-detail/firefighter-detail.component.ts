@@ -14,7 +14,7 @@ export class FirefighterDetailComponent implements OnInit, OnDestroy {
   index: number;
   subscription: Subscription;
 
-  constructor(private fireFightersService: FirefightersService,
+  constructor(private firefightersService: FirefightersService,
     private route: ActivatedRoute,
     private router: Router) { }
 
@@ -23,7 +23,7 @@ export class FirefighterDetailComponent implements OnInit, OnDestroy {
     .subscribe(
       (params: Params) => {
         this.index = +params['id'];
-        this.subscription = this.fireFightersService.firefighters
+        this.subscription = this.firefightersService.firefighters
           .subscribe(
             (firefighters: Firefighter[]) => {
               this.firefighter = firefighters[this.index];

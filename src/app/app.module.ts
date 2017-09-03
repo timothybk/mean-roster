@@ -1,8 +1,9 @@
+import { DropdownDirective } from './shared/dropdown.directive';
 import { HeaderComponent } from './shared/header.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { routing } from './app.routing';
 
@@ -28,11 +29,13 @@ import { QualificationsComponent } from './qualifications/qualifications.compone
     FirefighterDetailComponent,
     FirefighterStartComponent,
     FirefighterItemComponent,
-    QualificationsComponent
+    QualificationsComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     routing
   ],
