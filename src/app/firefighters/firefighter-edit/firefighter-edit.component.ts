@@ -3,7 +3,7 @@ import { Firefighter } from './../firefighter.model';
 import { FirefightersService } from './../firefighters.service';
 import { ActivatedRoute, Router, Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormArray } from '@angular/forms';
+import { FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-firefighter-edit',
@@ -27,37 +27,50 @@ export class FirefighterEditComponent implements OnInit {
       (params: Params) => {
         this.id = +params['id'];
         this.editMode = params['id'] != null;
-        // this.initForm();
+        this.initForm();
       }
       );
   }
 
-  // private initForm() {
-  //   let firefighterNumber: number;
-  //   let firefighterRank = '';
-  //   let firefighterName = '';
-  //   const firefighterQualifications = new FormArray([]);
+  private initForm() {
+    let firefighterNumber: number;
+    let firefighterRank = '';
+    let firefighterName = '';
+    const firefighterQualifications = new FormArray([]);
 
-  //   if (this.editMode) {
-  //     this.subscription = this.firefightersService.firefighters
-  //       .subscribe(
-  //       (firefighters: Firefighter[]) => {
-  //         this.firefighter = firefighters[this.id];
-  //       }
-  //       );
+    if (this.editMode) {
+      this.subscription = this.firefightersService.firefighters
+        .subscribe(
+        (firefighters: Firefighter[]) => {
+          this.firefighter = firefighters[this.id];
+        }
+        );
 
-  //     firefighterNumber = this.firefighter.number;
-  //     firefighterRank = this.firefighter.rank;
-  //     firefighterName = this.firefighter.name;
-  //     if (this.firefighter['qualifications']) {
-  //       for (const qualification of this.firefighter.qualifications) {
+      firefighterNumber = this.firefighter.number;
+      firefighterRank = this.firefighter.rank;
+      firefighterName = this.firefighter.name;
+      if (this.firefighter['qualifications']) {
+        for (const qualification of this.firefighter.qualifications) {
+          firefighterQualifications.push(new FormGroup({
+            'name': new FormControl(qualification.name, Validators.required)
+          })
+        );
+        }
+      }
 
-  //       )
-  //       }
-  //     }
-  //     firefighterQualifications.push(this.firefighter.qualifications);
 
+    }
 
-  //   }
+    this.firefighterForm = new FormGroup({
+      'number': new FormControl(firefighterNumber, Validators.required),
+      'rank': new FormControl(firefighterRank, Validators.required),
+      'name': new FormControl(firefighterName, Validators.required),
+      'qualifications': new FormControl(firefighterQualifications)
+    });
 
+  }
+
+  getControls() {
+    return (<FormArray>this.firefighterForm.get('qualifications')).controls;
+  }
 }
